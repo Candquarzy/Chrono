@@ -7,4 +7,6 @@ data class Card_Data(
 	val title: String,
 	val time: String,
 	var color: Color = Color.Black,
+	var text: String,
+	var start: String,
 )

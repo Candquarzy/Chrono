@@ -1,5 +1,7 @@
 package com.candy.list
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +12,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Arrangement
@@ -20,11 +21,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import com.candy.list.data.Data.card_data
 
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun Main_View(innerPadding: PaddingValues)
 {
@@ -46,14 +49,19 @@ fun Main_View(innerPadding: PaddingValues)
 					.width(280.dp)
 			)
 			{
-				Text(
-					text = "Candy🍥的记录",
-					fontSize = 32.sp,
-					fontWeight = FontWeight.ExtraBold,
-					textAlign = TextAlign.Center,
-					color = Color.Black,
+				Row(
+					verticalAlignment = Alignment.CenterVertically,
+					horizontalArrangement = Arrangement.Center,
 					modifier = Modifier.fillMaxSize()
 				)
+				{
+					Text(
+						text = "这是我的记录",
+						fontSize = 32.sp,
+						fontWeight = FontWeight.ExtraBold,
+						color = Color.Black,
+					)
+				}
 			}
 		}
 
