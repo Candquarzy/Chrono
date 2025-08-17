@@ -48,7 +48,7 @@ fun Main_View(innerPadding: PaddingValues)
 				)
 				{
 					Text(
-						text = "这是我的记录", //h1 title 大标题
+						text = "Candy🍥的记录", //h1 title 大标题
 						fontSize = 32.sp,
 						fontWeight = FontWeight.ExtraBold,
 						color = Color.Black,
