@@ -11,7 +11,7 @@ object Data
 	@RequiresApi(Build.VERSION_CODES.O)
 	val card_data:List<Card_Data> = listOf(
 		run{
-			val date = "2024-10-19" //start time 开始时间
+			val date = "2022-11-26" //start time 开始时间
 			Card_Data(
 				R.drawable.img1, //image 背景图片
 				"我是测试数据1", //title 标题
